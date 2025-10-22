@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Mental Health Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: #000;
+    }
+
+    .MainContainer {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-image: url(Gemini_Generated_Image_z97fa8z97fa8z97f.png);
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .top {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      background: transparent;
+      z-index: 10;
+    }
+
+    .outer-nav-div1 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .outer-nav-div1-logo img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    .outer-nav-div2-text {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .outer-nav-div2 {
+      display: flex;
+      gap: 5px;
+    }
+
+    .outer-nav-div2-text1 {
+      font-size: 15px;
+      font-weight: 500;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 5px 15px;
+      border-radius: 50px;
+      transition: 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .outer-nav-div2-text1:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .sub-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 120px;
+      width: 100%;
+    }
+
+    #inner-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-options {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-options  div {
+      position: relative;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-options  div:hover {
+      color: #ffd;
+    }
+
+    .nav-options ul {
+      list-style: none;
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 10px 0;
+      min-width: 150px;
+      z-index: 10;
+    }
+
+    .nav-options div:hover ul {
+      display: block;
+    }
+
+    .nav-options ul li {
+      padding: 8px 15px;
+    }
+
+    .nav-options ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-options ul li a:hover {
+      color: #ddd;
+    }
+
+    .book-cunsultancy-button button {
+      font-size: 15px;
+      font-weight: 600;
+      color: white;
+      background-color: transparent;
+      border: 2px solid white;
+      padding: 8px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .book-cunsultancy-button button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .actulContent {
+      margin-top: 150px;
+      text-align: center;
+      color: white;
+    }
+
+    .actulContent .headline1 {
+      font-size: 60px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .actulContent .headline2 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .actulContent .paragraph {
+      font-size: 16px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .actulContent .consult-btn {
+      margin-top: 40px;
+    }
+
+    .actulContent .consult-btn button {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      background-color: transparent;
+      border: 2px solid white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .actulContent .consult-btn button:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="MainContainer">
+
+    <div class="top">
+      <div class="outer-nav-div1">
+        <div class="outer-nav-div1-logo">
+          <img src="outer-nav-logo.png" alt="clinic logo">
+        </div>
+        <div class="outer-nav-div2-text">Bloom by Akif Naveed</div>
+      </div>
+
+      <div class="outer-nav-div2">
+        <div class="outer-nav-div2-text1">Healthcare</div>
+        <div class="outer-nav-div2-text1">Website</div>
+      </div>
+    </div>
+
+    <div class="sub-main">
+      <div id="inner-nav">
+        <div class="name">BLOOM</div>
+
+        <div class="options">
+          <div class="nav-options">
+            <div>Services
+              <ul>
+                <li><a href="#">Counselling</a></li>
+                <li><a href="#">Psychotherapy</a></li>
+                <li><a href="#">Therapy</a></li>
+              </ul>
+            </div>
+
+            <div>Resources
+              <ul>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Podcast</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Articles</a></li>
+              </ul>
+            </div>
+
+            <div>About Us
+            <ul>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Address</a></li>
+            </ul>
+            </div>
+
+            <div><a href="#" style="text-decoration:none;color:white;">FAQ</a></div>
+            <div><a href="#" style="text-decoration:none;color:white;">Contents</a></div>
+        </div>
+
+        <div class="book-cunsultancy-button">
+            <button>Book Consultancy</button>
+          </div>
+        </div>
+      </div>
+
+    <div class="actulContent">
+        <div class="headline1">Grow through</div>
+        <div class="headline2">what you go through</div>
+        <div class="paragraph">
+        A modern mental health clinic that focuses on helping<br>
+        individuals grow, heal, and thrive emotionally
+        </div>
+        <div class="consult-btn">
+        <button>Book Consultation</button>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
